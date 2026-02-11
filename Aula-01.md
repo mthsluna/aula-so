@@ -95,6 +95,3 @@ O desenvolvimento de um portfólio de projetos é incentivado, pois:
 - Criação de um repositório no GitHub;
 - Elaboração de um resumo da aula em Markdown;
 - Criação de uma linha do tempo de Sistemas Operacionais.
-
-## Conclusão
-A Aula 01 apresentou a estrutura da disciplina, seus objetivos, conteúdos programáticos e critérios de avaliação, além de introduzir os conceitos iniciais de Sistemas Operacionais e orientar as primeiras atividades práticas.
