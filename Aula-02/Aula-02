@@ -34,165 +34,244 @@
 
 # Capítulo 1 — Introdução aos Sistemas Operacionais
 
-## 1.1 Conceito Formal de Sistema Operacional
+## 1.1 Definição Formal de Sistema Operacional
 
-Um sistema operacional (SO) é definido como um software de controle que atua como intermediário entre o hardware físico e os programas de aplicação. Sua função principal é criar um ambiente estável, eficiente e seguro para execução de programas, abstraindo a complexidade do hardware subjacente.
+Um sistema operacional (SO) é um software fundamental responsável por gerenciar os recursos de hardware de um computador e fornecer uma interface padronizada para a execução de programas de aplicação. Ele atua como um intermediário entre o usuário, os programas e o hardware físico, garantindo que os recursos do sistema sejam utilizados de forma eficiente, segura e controlada.
 
-Do ponto de vista técnico, o sistema operacional executa em modo privilegiado (modo núcleo ou modo supervisor), tendo acesso irrestrito aos recursos da máquina, enquanto os programas de usuário operam em modo restrito.
-
-## 1.2 Sistema Operacional como Máquina Estendida
-
-A arquitetura de hardware é, por natureza, complexa e heterogênea. O sistema operacional transforma essa complexidade em abstrações simples e uniformes, como:
-
-* Arquivos como abstração de dispositivos de armazenamento
-* Processos como abstração da CPU
-* Espaços de endereçamento como abstração da memória física
-
-Essas abstrações permitem que programadores foquem na lógica de alto nível, sem necessidade de lidar com registradores, interrupções ou controladores de dispositivos.
-
-## 1.3 Sistema Operacional como Gerenciador de Recursos
-
-Além de abstrair, o sistema operacional gerencia recursos finitos:
-
-* Tempo de CPU
-* Espaço de memória
-* Dispositivos de entrada e saída
-* Largura de banda de comunicação
-
-Esse gerenciamento envolve políticas (o que fazer) e mecanismos (como fazer), garantindo justiça, eficiência e previsibilidade.
-
-## 1.4 Evolução Histórica Detalhada
-
-### 1.4.1 Primeira Geração (1945–1955)
-
-* Computadores sem sistema operacional
-* Programação direta em linguagem de máquina
-* Uso exclusivo por um único usuário
-
-### 1.4.2 Segunda Geração (1955–1965)
-
-* Introdução de sistemas em lote
-* Separação entre programador e operador
-* Uso de cartões perfurados
-
-### 1.4.3 Terceira Geração (1965–1980)
-
-* Multiprogramação
-* Compartilhamento de tempo
-* Surgimento de sistemas como UNIX
-
-### 1.4.4 Quarta e Quinta Gerações (1980–presente)
-
-* Computadores pessoais
-* Interfaces gráficas
-* Mobilidade, virtualização e computação em nuvem
-
-## 1.5 Conceitos Fundamentais dos Sistemas Operacionais
-
-* Processo: instância ativa de um programa
-* Thread: fluxo de execução dentro de um processo
-* Arquivo: coleção persistente de dados
-* Sistema de arquivos: organização lógica do armazenamento
-* Proteção: controle de acesso aos recursos
-
-## 1.6 Estruturas de Sistemas Operacionais
-
-* Sistemas monolíticos
-* Sistemas em camadas
-* Micronúcleos
-* Arquiteturas híbridas
-* Máquinas virtuais
-
-## 1.7 Objetivos do Capítulo
-
-* Introduzir o papel do sistema operacional
-* Estabelecer a base conceitual do livro
-* Preparar o leitor para os capítulos subsequentes
-
-## 1.8 Resumo do Capítulo
-
-Este capítulo apresentou a definição, funções, evolução histórica e conceitos fundamentais dos sistemas operacionais.
+Do ponto de vista técnico, o sistema operacional é o primeiro software carregado durante a inicialização do computador e permanece ativo durante todo o tempo de funcionamento da máquina. Ele opera majoritariamente em modo privilegiado (modo núcleo), tendo acesso direto a instruções sensíveis do processador e a dispositivos físicos.
 
 ---
 
+## 1.2 Objetivos Fundamentais de um Sistema Operacional
+
+Os principais objetivos de um sistema operacional incluem:
+
+- **Conveniência:** tornar o uso do computador simples e intuitivo para usuários e desenvolvedores.
+- **Eficiência:** maximizar a utilização dos recursos disponíveis, como CPU, memória e dispositivos de E/S.
+- **Segurança:** proteger dados e recursos contra acessos não autorizados.
+- **Escalabilidade:** permitir crescimento do sistema sem perda significativa de desempenho.
+- **Confiabilidade:** garantir execução correta mesmo diante de falhas parciais.
+
+Esses objetivos frequentemente entram em conflito, exigindo decisões de projeto cuidadosas.
+
+---
+
+## 1.3 Sistema Operacional como Máquina Estendida
+
+A arquitetura de hardware é composta por diversos componentes complexos, como registradores, interrupções, barramentos e controladores de dispositivos. O sistema operacional esconde essa complexidade oferecendo abstrações de alto nível:
+
+- **Processos** como abstração do uso da CPU
+- **Arquivos** como abstração do armazenamento físico
+- **Memória virtual** como abstração da memória principal
+- **Sockets** como abstração de comunicação
+
+Essas abstrações permitem que programadores desenvolvam aplicações portáveis e independentes do hardware específico.
+
+---
+
+## 1.4 Sistema Operacional como Gerenciador de Recursos
+
+Além de abstrair, o sistema operacional também atua como um gerente de recursos limitados. Ele decide:
+
+- Qual processo recebe a CPU e por quanto tempo
+- Quais processos podem ocupar memória
+- Quando dispositivos de E/S podem ser utilizados
+- Como conflitos de acesso são resolvidos
+
+Esse gerenciamento é realizado por meio de políticas (decisões) e mecanismos (implementações técnicas), conceito fundamental no projeto de sistemas operacionais.
+
+---
+
+## 1.5 Evolução Histórica dos Sistemas Operacionais
+
+### 1.5.1 Primeira Geração (1945–1955)
+- Ausência de sistemas operacionais
+- Programação manual em linguagem de máquina
+- Uso exclusivo do hardware por um único programa
+
+### 1.5.2 Segunda Geração (1955–1965)
+- Introdução de sistemas em lote
+- Execução sequencial de programas
+- Redução do tempo ocioso da CPU
+
+### 1.5.3 Terceira Geração (1965–1980)
+- Multiprogramação
+- Compartilhamento de tempo
+- Surgimento de sistemas interativos
+
+### 1.5.4 Gerações Modernas
+- Computadores pessoais
+- Interfaces gráficas
+- Virtualização
+- Computação em nuvem e dispositivos móveis
+
+---
+
+## 1.6 Chamadas de Sistema
+
+Chamadas de sistema são o mecanismo pelo qual programas em modo usuário solicitam serviços ao sistema operacional. Exemplos incluem:
+
+- Criação e término de processos
+- Operações de leitura e escrita em arquivos
+- Alocação de memória
+- Comunicação entre processos
+
+As chamadas de sistema garantem proteção, pois impedem acesso direto ao hardware por aplicações.
+
+---
+
+## 1.7 Estruturas de Sistemas Operacionais
+
+As principais arquiteturas incluem:
+
+- **Monolítica:** todos os serviços no núcleo
+- **Em camadas:** organização hierárquica
+- **Micronúcleo:** núcleo mínimo com serviços externos
+- **Híbrida:** combinação de abordagens
+- **Máquinas virtuais:** múltiplos sistemas sobre o mesmo hardware
+
+Cada estrutura envolve compromissos entre desempenho, segurança e complexidade.
+
+---
+
+## 1.8 Importância Acadêmica do Capítulo
+
+Este capítulo estabelece a base conceitual necessária para a compreensão dos capítulos subsequentes. Ele fornece o vocabulário, os modelos mentais e as motivações fundamentais do estudo de sistemas operacionais.
+
+---
+
+## 1.9 Resumo Estruturado do Capítulo
+
+- Sistemas operacionais gerenciam hardware e software
+- Fornecem abstrações para simplificar o uso do computador
+- Evoluíram conforme o avanço tecnológico
+- Operam como máquina estendida e gerente de recursos
+
 # Capítulo 2 — Processos e Threads
 
-## 2.1 Processos: Conceito e Estrutura
+## 2.1 Conceito de Processo
 
-Um processo é um programa em execução acompanhado de seu contexto de execução, incluindo:
+Um processo é uma instância ativa de um programa em execução. Ele não se resume apenas ao código executável, mas inclui todo o contexto necessário para sua execução, como dados, pilha, registradores e estado atual.
 
-* Código do programa
-* Dados globais
-* Pilha
-* Registradores
-* Estado do processo
+Cada processo possui um espaço de endereçamento próprio, isolado dos demais, garantindo proteção e estabilidade do sistema.
 
-## 2.2 Estados de Processo
+---
 
-Os principais estados são:
+## 2.2 Estrutura de um Processo
 
-* Novo: processo recém-criado
-* Pronto: aguardando CPU
-* Executando: usando a CPU
-* Bloqueado: aguardando evento
-* Encerrado: execução finalizada
+Um processo é composto por:
 
-## 2.3 Criação e Término de Processos
+- Código do programa
+- Dados globais
+- Pilha de execução
+- Registradores do processador
+- Informações de controle (PCB — Process Control Block)
+
+O PCB armazena informações essenciais para o gerenciamento do processo pelo sistema operacional.
+
+---
+
+## 2.3 Estados de um Processo
+
+Os processos transitam entre diferentes estados durante sua vida útil:
+
+- **Novo:** processo recém-criado
+- **Pronto:** apto a executar
+- **Executando:** usando a CPU
+- **Bloqueado:** aguardando evento externo
+- **Finalizado:** execução encerrada
+
+Essas transições são controladas pelo escalonador do sistema operacional.
+
+---
+
+## 2.4 Criação e Finalização de Processos
 
 Processos podem ser criados por:
+- Inicialização do sistema
+- Chamadas explícitas de criação
+- Criação por outro processo
 
-* Inicialização do sistema
-* Chamadas explícitas
-* Criação por outro processo
+A finalização pode ocorrer de forma normal, por erro ou por ação externa.
 
-O término pode ocorrer de forma voluntária ou forçada.
+---
 
-## 2.4 Threads: Definição e Motivação
+## 2.5 Conceito de Threads
 
-Threads são unidades menores de execução dentro de um processo. Compartilham:
+Threads são unidades de execução menores que compartilham o mesmo espaço de endereçamento dentro de um processo. Elas permitem paralelismo e maior eficiência no uso da CPU.
 
-* Espaço de endereçamento
-* Arquivos abertos
+Cada thread possui:
+- Contador de programa próprio
+- Registradores próprios
+- Pilha própria
 
-Mas possuem:
+---
 
-* Contador de programa próprio
-* Pilha própria
+## 2.6 Vantagens do Uso de Threads
 
-## 2.5 Modelos de Implementação de Threads
+- Melhor aproveitamento de sistemas multiprocessadores
+- Maior responsividade de aplicações
+- Menor custo de criação em relação a processos
+- Comunicação mais eficiente entre fluxos de execução
 
-* Threads em espaço do usuário
-* Threads em espaço do núcleo
-* Modelos híbridos
+---
 
-## 2.6 Comunicação e Sincronização
+## 2.7 Implementações de Threads
 
-### 2.6.1 Problemas Fundamentais
+### 2.7.1 Threads em Espaço do Usuário
+- Gerenciamento feito pela aplicação
+- Menor sobrecarga
+- Problemas com bloqueios
 
-* Condições de corrida
-* Inconsistência de dados
+### 2.7.2 Threads em Espaço do Núcleo
+- Gerenciamento pelo sistema operacional
+- Melhor suporte a multiprocessamento
+- Maior custo de troca de contexto
 
-### 2.6.2 Mecanismos de Sincronização
+### 2.7.3 Modelos Híbridos
+- Combinação das abordagens anteriores
 
-* Semáforos
-* Mutexes
-* Monitores
-* Barreiras
+---
 
-## 2.7 Escalonamento de Processos e Threads
+## 2.8 Comunicação e Sincronização
 
-* Objetivos: justiça, eficiência e responsividade
-* Algoritmos clássicos e modernos
+### 2.8.1 Problemas de Concorrência
+- Condições de corrida
+- Inconsistência de dados
+- Deadlocks
 
-## 2.8 Problemas Clássicos de Concorrência
+### 2.8.2 Mecanismos de Sincronização
+- Semáforos
+- Mutexes
+- Monitores
+- Barreiras de sincronização
 
-* Jantar dos filósofos
-* Leitores e escritores
+---
 
-## 2.9 Resumo do Capítulo
+## 2.9 Escalonamento de Processos e Threads
 
-Este capítulo detalhou os mecanismos de concorrência e paralelismo nos sistemas operacionais.
+O escalonamento define qual processo ou thread será executado pela CPU. Os objetivos incluem:
+- Justiça
+- Eficiência
+- Baixo tempo de resposta
+- Previsibilidade
 
+Diversos algoritmos são utilizados conforme o tipo de sistema.
+
+---
+
+## 2.10 Importância Acadêmica do Capítulo
+
+Este capítulo é central no estudo de sistemas operacionais, pois introduz os conceitos de concorrência e paralelismo, fundamentais para sistemas modernos.
+
+---
+
+## 2.11 Resumo Estruturado do Capítulo
+
+- Processos representam programas em execução
+- Threads permitem paralelismo eficiente
+- Concorrência exige mecanismos de sincronização
+- Escalonamento define o uso da CPU
 ---
 
 # Capítulo 3 — Gerenciamento de Memória
