@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="img/intro.gif" alt="Introdução visual aos Sistemas Operacionais" width="720"/>
+  <img src="img/intro.gif" alt="Introdução visual aos Sistemas Operacionais" width="300"/>
 </p>
 
 # Sistemas Operacionais Modernos — Guia Acadêmico Extensivo (Capítulos 1–13)
