@@ -1,6 +1,6 @@
 <!-- Imagem de capa centralizada -->
 <p align="center">
-  <img src="./assets/os.png" width="400">
+  <img src="./assets/os.png" width="250">
 </p>
 
 # Pesquisa: Sistemas Operacionais Baseados em Outros Sistemas
