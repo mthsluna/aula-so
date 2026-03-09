@@ -22,7 +22,7 @@ Muitos sistemas operacionais são desenvolvidos a partir de outros sistemas já 
 
 ### Ubuntu
 
-![Ubuntu](./img/ubuntu.png)
+![Ubuntu](./assets/ubuntu.png)
 
 Sistema operacional baseado no Debian, focado em facilidade de uso e muito utilizado em desktops e servidores.
 
@@ -30,7 +30,7 @@ Sistema operacional baseado no Debian, focado em facilidade de uso e muito utili
 
 ### Linux Mint
 
-![Linux Mint](./img/linux-mint.png)
+![Linux Mint](./assets/linux-mint.png)
 
 Distribuição baseada no Ubuntu, conhecida por oferecer uma interface amigável e semelhante ao Windows.
 
@@ -38,7 +38,7 @@ Distribuição baseada no Ubuntu, conhecida por oferecer uma interface amigável
 
 ### Android
 
-![Android](./img/android.png)
+![Android](./assets/android.png)
 
 Sistema operacional móvel desenvolvido pelo Google, baseado no kernel Linux e utilizado em smartphones e tablets.
 
@@ -46,7 +46,7 @@ Sistema operacional móvel desenvolvido pelo Google, baseado no kernel Linux e u
 
 ### macOS
 
-![macOS](./img/macos.png)
+![macOS](./assets/macos.png)
 
 Sistema operacional da Apple baseado em Unix, derivado do NeXTSTEP, utilizado em computadores Mac.
 
@@ -54,7 +54,7 @@ Sistema operacional da Apple baseado em Unix, derivado do NeXTSTEP, utilizado em
 
 ### Chrome OS
 
-![Chrome OS](./img/chromeos.png)
+![Chrome OS](./assets/chromeos.png)
 
 Sistema operacional desenvolvido pelo Google baseado em Linux, projetado para funcionar principalmente com aplicações web.
 
