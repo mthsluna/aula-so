@@ -9,13 +9,38 @@ Este trabalho apresenta 5 exemplos de sistemas operacionais que foram desenvolvi
 
 ## 2. Sistemas Operacionais Pesquisados
 
-| Sistema Operacional | Sistema Base | Tipo de Base | Ano de Lançamento |
-|---------------------|-------------|--------------|------------------|
-| Ubuntu | Debian | Base Linux | 2004 |
-| Linux Mint | Ubuntu | Distribuição Linux baseada em Ubuntu | 2006 |
-| Android | Linux | Kernel Linux | 2008 |
-| macOS | Unix / NeXTSTEP | Base Unix | 2001 |
-| Chrome OS | Linux / Gentoo | Base Linux | 2011 |
+### Ubuntu
+![Ubuntu](./img/ubuntu.png)
+
+Sistema operacional baseado no Debian, voltado para facilidade de uso e popular em desktops e servidores.
+
+---
+
+### Linux Mint
+![Linux Mint](./img/linux-mint.png)
+
+Distribuição baseada no Ubuntu, conhecida por sua interface amigável e semelhança com o Windows.
+
+---
+
+### Android
+![Android](./img/android.png)
+
+Sistema operacional móvel desenvolvido pelo Google, baseado no kernel Linux.
+
+---
+
+### macOS
+![macOS](./img/macos.png)
+
+Sistema operacional da Apple baseado em Unix (derivado do NeXTSTEP).
+
+---
+
+### Chrome OS
+![Chrome OS](./img/chromeos.png)
+
+Sistema operacional desenvolvido pelo Google, baseado em Linux e focado em aplicações web.
 
 ---
 
@@ -23,15 +48,15 @@ Este trabalho apresenta 5 exemplos de sistemas operacionais que foram desenvolvi
 
 | Sistema Operacional | Sistema Base | Principais Diferenças |
 |---------------------|-------------|----------------------|
-| Ubuntu | Debian | Interface mais amigável, foco em usuários comuns, atualizações mais frequentes. |
-| Linux Mint | Ubuntu | Interface mais tradicional e semelhante ao Windows, inclui codecs e softwares pré-instalados. |
-| Android | Linux | Adaptado para dispositivos móveis, interface touchscreen e aplicativos próprios. |
-| macOS | Unix / NeXTSTEP | Interface gráfica própria da Apple, integração com hardware Apple e foco em design e usabilidade. |
-| Chrome OS | Linux / Gentoo | Sistema leve focado em navegador e aplicativos web, usado principalmente em Chromebooks. |
+| Ubuntu | Debian | Interface mais amigável, foco em usuários comuns e atualizações frequentes. |
+| Linux Mint | Ubuntu | Interface semelhante ao Windows e softwares pré-instalados. |
+| Android | Linux | Adaptado para dispositivos móveis e interface touchscreen. |
+| macOS | Unix / NeXTSTEP | Integração com hardware Apple e interface própria. |
+| Chrome OS | Linux / Gentoo | Sistema leve focado em navegador e aplicativos web. |
 
 ---
 
-## 5. Referências
+## 4. Referências
 
 - https://www.kernel.org  
 - https://www.debian.org  
