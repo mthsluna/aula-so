@@ -1,3 +1,8 @@
+<!-- Imagem de capa centralizada -->
+<p align="center">
+  <img src="./assets/os.png" width="400">
+</p>
+
 # Pesquisa: Sistemas Operacionais Baseados em Outros Sistemas
 
 ## 1. Introdução
